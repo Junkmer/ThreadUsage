@@ -7,12 +7,122 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="24dp"
+        android:text="ThreadPoolExecutor"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/thread_pool_execute_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="正常情况"
+        app:layout_constraintEnd_toStartOf="@id/thread_pool_execute_btn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title1" />
+
+    <Button
+        android:id="@+id/thread_pool_execute_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="特殊情况"
+        app:layout_constraintEnd_toStartOf="@id/thread_pool_execute_btn3"
+        app:layout_constraintStart_toEndOf="@id/thread_pool_execute_btn1"
+        app:layout_constraintTop_toTopOf="@id/thread_pool_execute_btn1" />
+
+    <Button
+        android:id="@+id/thread_pool_execute_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="异常情况"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/thread_pool_execute_btn2"
+        app:layout_constraintTop_toTopOf="@id/thread_pool_execute_btn1" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="FixedThreadPool"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thread_pool_execute_btn1" />
+
+    <Button
+        android:id="@+id/fixed_thread_pool_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="正常使用"
+        app:layout_constraintStart_toStartOf="@id/title2"
+        app:layout_constraintTop_toBottomOf="@id/title2" />
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="SingleThreadPool"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fixed_thread_pool_btn1" />
+
+    <Button
+        android:id="@+id/single_thread_pool_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="正常使用"
+        app:layout_constraintStart_toStartOf="@id/title3"
+        app:layout_constraintTop_toBottomOf="@id/title3" />
+
+    <TextView
+        android:id="@+id/title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="CachedThreadPool"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/single_thread_pool_btn1" />
+
+    <Button
+        android:id="@+id/cached_thread_pool_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="正常使用"
+        app:layout_constraintStart_toStartOf="@id/title4"
+        app:layout_constraintTop_toBottomOf="@id/title4" />
+
+    <TextView
+        android:id="@+id/title5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="ScheduledThreadPool"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cached_thread_pool_btn1" />
+
+    <Button
+        android:id="@+id/scheduled_thread_pool_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="正常使用"
+        app:layout_constraintStart_toStartOf="@id/title5"
+        app:layout_constraintTop_toBottomOf="@id/title5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
